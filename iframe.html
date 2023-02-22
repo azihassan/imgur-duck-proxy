@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      setTimeout(() => {
+        const image = document.createElement("img");
+        image.setAttribute("id", "dynamic-image");
+        image.setAttribute("src", "https://i.imgur.com/aEFogmG.jpg");
+        image.setAttribute("title", "raccoon and fawn friends");
+        image.setAttribute("alt", "raccoon and fawn friends");
+        image.onerror = function (error) {
+          console.error("Failed to load image");
+          console.error(error);
+          document.getElementById("error").innerText = "Failed to load image";
+        };
+
+        const link = document.createElement("a");
+        link.setAttribute("href", "https://i.imgur.com/aEFogmG.jpg");
+        link.appendChild(image);
+
+        document.getElementById("image-container").appendChild(link);
+      }, 2000);
+    </script>
+  </head>
+  <body>
+    <main style="display: flex; flex-direction: column">
+      <a href="https://i.imgur.com/aEFogmG.jpg">
+        <img
+          src="https://i.imgur.com/aEFogmG.jpg"
+          alt="raccoon and fawn friends"
+          title="raccoon and fawn friends"
+          id="static-image"
+        />
+      </a>
+
+      <div id="image-container">
+        <p>Dynamically added image:</p>
+        <div id="error"></div>
+      </div>
+    </main>
+  </body>
+</html>

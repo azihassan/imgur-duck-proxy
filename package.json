@@ -1,0 +1,32 @@
+{
+  "name": "imgur-duck-proxy",
+  "version": "1.0.0",
+  "description": "Unblocks imgur images by loading them through DuckDuckGo's proxy",
+  "main": "duck.js",
+  "scripts": {
+    "test": "./node_modules/.bin/cypress run --headless --browser=firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azihassan/imgur-duck-proxy.git"
+  },
+  "keywords": [
+    "firefox",
+    "extension",
+    "imgur",
+    "duckduckgo",
+    "proxy"
+  ],
+  "author": "Azi Hassan",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/azihassan/imgur-duck-proxy/issues"
+  },
+  "homepage": "https://github.com/azihassan/imgur-duck-proxy#readme",
+  "devDependencies": {
+    "cypress": "^12.5.1"
+  },
+  "dependencies": {
+    "web-ext": "^7.5.0"
+  }
+}
