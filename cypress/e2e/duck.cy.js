@@ -15,6 +15,26 @@ describe("imgur-duck-proxy", () => {
       );
   });
 
+  it("prepends duckduckgo prefix to imgur image src attributes without extension", () => {
+    cy.get("#static-image-no-extension")
+      .first()
+      .should(
+        "have.attr",
+        "src",
+        "https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/aEFogmG.jpg"
+      );
+  });
+
+  it("prepends duckduckgo prefix to imgur a href attributes without extension", () => {
+    cy.get("#static-image-link-no-extension")
+      .first()
+      .should(
+        "have.attr",
+        "href",
+        "https://proxy.duckduckgo.com/iu/?u=https://i.imgur.com/aEFogmG.jpg"
+      );
+  });
+
   it("prepends duckduckgo prefix to imgur image src attributes inside iframes", () => {
     cy.get("iframe")
       .its("0.contentDocument.body")
