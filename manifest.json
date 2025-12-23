@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Imgur Duck proxy",
-  "version": "1.1",
+  "version": "1.2",
   "homepage_url": "https://github.com/azihassan/imgur-duck-proxy",
 
   "description": "Unblocks imgur images by loading them through DuckDuckGo's proxy",
